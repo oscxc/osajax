@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>osajax example</title>
+    <script src="osajax.js"></script>
+</head>
+<body>
+
+<script>
+    osajax.get('LICENSE').then(function (xhr) {
+        console.log(xhr.response);
+    });
+</script>
+</body>
+</html>
