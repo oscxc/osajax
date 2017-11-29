@@ -1,0 +1,23 @@
+{
+  "name": "osajax",
+  "version": "1.0.0",
+  "description": "浏览器端 ajax模块设计",
+  "main": "osajax.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscxc/osajax.git"
+  },
+  "keywords": [
+    "ajax",
+    "XMLHttpRequest"
+  ],
+  "author": "七八个星天怪",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscxc/osajax/issues"
+  },
+  "homepage": "https://github.com/oscxc/osajax#readme"
+}
