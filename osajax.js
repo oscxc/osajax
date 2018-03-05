@@ -22,15 +22,15 @@
     function ajax(method,obj) {
         return new Promise(function (resolve) {
             var xhr = new XMLHttpRequest();
-            obj.headers && eachObj(obj.headers,function (k,v) {
-                xhr.setRequestHeader(k,v);
-            });
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4){
                     resolve(xhr);
                 }
             };
             xhr.open(method,obj.url);
+            obj.headers && eachObj(obj.headers,function (k,v) {
+                xhr.setRequestHeader(k,v);
+            });
             xhr.send(obj.body?obj.body:'');
         });
     }
