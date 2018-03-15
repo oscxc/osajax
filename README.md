@@ -8,9 +8,9 @@
 
 **优点**:
 
-  &emsp;1、易用，基于 Promise
+  &emsp;1、易用，基于 MiniPromise([`https://github.com/oscxc/MiniPromise`](https://github.com/oscxc/osajax/releases))，使用then方法替代callback，兼容IE
 
-  &emsp;2、轻量（仅不到60行代码）
+  &emsp;2、轻量（仅不到70行代码）
 
   &emsp;3、易改造、容易查找问题
 
@@ -18,9 +18,7 @@
 
 **缺点**:
 
-  &emsp;1、不会自动解析json等字符串
-
-  &emsp;2、不兼容不支持Promise的浏览器，比如 IE，如果需要兼容，请先引用 [`此 Promise 模块`](https://github.com/oscxc/Promise)
+  &emsp;1、不支持自动解析queryString、json字符串
 
 ## 获取和引用 osajax
 
@@ -54,6 +52,7 @@ osajax.get('/Controller/Action?a=1&b=2').then(function (xhr) {
 osajax.get({
     url:'/Controller/Action?a=1&b=2',
     headers:{},
+    withCredentials:true,
 }).then(function (xhr) {
     console.log(xhr.response);
 })
@@ -95,10 +94,3 @@ osajax.lock
 osajax.propfind
 osajax.view
 ```
-
-
-## 联系我们
-
-如有问题，欢迎加入下面QQ群
-
-![](https://oscxc.github.io/Images/doc/contact.jpg)
