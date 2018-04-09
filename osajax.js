@@ -62,6 +62,6 @@
         module.exports = osajax
     }
     else{
-        this.osajax = osajax
+        window.osajax = osajax
     }
 })()
