@@ -43,8 +43,8 @@ var osajax = require('osajax');
 ## Usage examples
 
 ```
-osajax.get('/Controller/Action?a=1&b=2').then(function (xhr) {
-    console.log(xhr.response);
+osajax.get('/Controller/Action?a=1&b=2').then(function (data,status,xhr) {
+    console.log(data);
 })
 ```
 
@@ -53,8 +53,8 @@ osajax.get({
     url:'/Controller/Action?a=1&b=2',
     headers:{},
     withCredentials:true,
-}).then(function (xhr) {
-    console.log(xhr.response);
+}).then(function (data,status,xhr) {
+    console.log(data);
 })
 ```
 
@@ -65,8 +65,8 @@ osajax.post({
         Content-Type:'text/plain'
     },
     body:'hello world!'
-}).then(function (xhr) {
-    console.log(xhr.response);
+}).then(function (data,status,xhr) {
+    console.log(data);
 })
 ```
 ## 支持15种请求类型（参考postman）
