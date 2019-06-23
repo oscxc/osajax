@@ -62,7 +62,7 @@ osajax.get({
 osajax.post({
     url:'/Controller/Action?a=1&b=2',
     headers:{
-        Content-Type:'text/plain'
+        'Content-Type':'text/plain'
     },
     body:'hello world!'
 }).then(function (data,status,xhr) {
